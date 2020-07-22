@@ -1,0 +1,161 @@
+html{
+    background: #e6e6e6;
+    --primary-color: #198e1d;
+    --primary-color-tagged: #0f7412;
+}
+
+.mainContentBoxDiv{
+    box-shadow: 0px 0px 20px #c3bebe !important;
+    padding: 15px;
+    border-radius: 10px !important;
+    margin-top: 50px !important;
+    margin-right: 40px !important;
+
+    input {
+        font-size: 14px !important;
+        font-weight: normal !important;
+    }
+
+    .flexAlignCenter{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .mainHeading {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .inputSelectionBox {
+        margin-bottom: 30px;
+    }
+
+    fieldset{
+        border-radius: 5px;
+        transition: all .4s !important;
+    }
+
+    .specialFullButton{
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .MuiButton-containedPrimary{
+        background-color: var(--primary-color);
+
+        &:hover{
+            background-color: var(--primary-color-tagged);
+        }
+    }
+
+    .dateInput {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+
+        .MuiInputBase-formControl{
+            width: 100%;
+        }
+    }
+
+    
+    svg.MuiSvgIcon-root {
+        color: var(--primary-color);
+    }
+}
+
+
+////internal css
+.MuiInputBase-root.MuiOutlinedInput-root.MuiAutocomplete-inputRoot.MuiInputBase-fullWidth.MuiInputBase-formControl.MuiInputBase-adornedEnd.MuiOutlinedInput-adornedEnd {
+    padding: 5px;
+}
+
+.MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child {
+    padding: 7px;
+}
+
+legend.PrivateNotchedOutline-legendLabelled-10 {
+    height: 10px;
+}
+
+label#combo-box-demo-label,
+label#outlined-basic-label {
+    top: -5px;
+    font-size: 14px;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--primary-color) !important;
+}
+
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(14px, 0px) scale(0.75) !important;
+    color: var(--primary-color);
+}
+
+.MuiInputLabel-root.Mui-focused{
+    color: var(--primary-color) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: var(--primary-color-tagged) !important;
+    border-width: 1px !important;
+}
+
+input#outlined-basic {
+    padding: 13px !important;
+}
+
+.slideLTR{
+    animation: ltr .4s 1 !important;
+}
+
+.bottomToTopAnimation {
+    animation: bottomToTop 1s 1 !important;
+}
+
+@keyframes bottomToTop{
+    from{
+        opacity: 0;
+        transform: translate(0, 10px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+
+@keyframes ltr{
+    from{
+        transform: translate(10px, 0px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@for $i from 1 through 10{
+    .animationFlow:nth-child(#{$i}){
+        animation-duration: $i * .2s !important;
+    }
+}
+
+.makeStyles-nv-5 {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .mainContentBoxDiv {
+        float: left;
+        width: calc(100% - 70px) !important;
+        margin: 60px 20px 0 20px !important;
+        min-width: auto;
+    }
+}
